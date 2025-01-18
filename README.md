@@ -1,6 +1,6 @@
 <div align="center">
 
-![Header](assets/header.svg)
+![Header](assets/header.png)
 
 # vscode-langmodel-minimal
 
