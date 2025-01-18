@@ -16,6 +16,8 @@
 
 ## ✨ 機能
 
+https://github.com/user-attachments/assets/16e23dcd-0dd9-4ad2-9f65-9fc916174b10
+
 ### 🏗️ 洗練された構造設計
 - `src/views/`: UIコンポーネント
 - `src/models/`: チャットモデル管理
