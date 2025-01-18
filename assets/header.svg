@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="200" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+    <!-- グラデーション背景 -->
+    <defs>
+        <linearGradient id="headerGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#3f87a6;stop-opacity:1">
+                <animate attributeName="stop-color" values="#3f87a6;#2f4858;#3f87a6" dur="4s" repeatCount="indefinite"/>
+            </stop>
+            <stop offset="100%" style="stop-color:#2f4858;stop-opacity:1">
+                <animate attributeName="stop-color" values="#2f4858;#3f87a6;#2f4858" dur="4s" repeatCount="indefinite"/>
+            </stop>
+        </linearGradient>
+        <!-- テキストグラデーション -->
+        <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1"/>
+            <stop offset="100%" style="stop-color:#f0f0f0;stop-opacity:1"/>
+        </linearGradient>
+    </defs>
+
+    <!-- 角丸の背景 -->
+    <rect width="800" height="200" rx="15" ry="15" fill="url(#headerGradient)"/>
+
+    <!-- メインテキスト -->
+    <text x="400" y="120" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="url(#textGradient)" text-anchor="middle">
+        vscode-langmodel-minimal
+        <animate attributeName="y" values="120;115;120" dur="2s" repeatCount="indefinite"/>
+    </text>
+
+    <!-- サブテキスト -->
+    <text x="400" y="160" font-family="Arial, sans-serif" font-size="20" fill="#e0e0e0" text-anchor="middle" opacity="0.9">
+        Enhance Your VS Code with AI-Powered Chat
+        <animate attributeName="opacity" values="0.9;1;0.9" dur="2s" repeatCount="indefinite"/>
+    </text>
+
+    <!-- 装飾的な図形 -->
+    <circle cx="150" cy="50" r="20" fill="#ffffff" opacity="0.1">
+        <animate attributeName="r" values="20;25;20" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="650" cy="150" r="15" fill="#ffffff" opacity="0.1">
+        <animate attributeName="r" values="15;20;15" dur="2s" repeatCount="indefinite"/>
+    </circle>
+</svg>
