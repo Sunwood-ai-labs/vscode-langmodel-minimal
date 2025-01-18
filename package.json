@@ -1,0 +1,115 @@
+{
+  "name": "chat-sample",
+  "publisher": "vscode-samples",
+  "displayName": "VS Code Chat",
+  "description": "シンプルなチャットボット拡張機能",
+  "version": "0.2.0",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "AI",
+    "Chat"
+  ],
+  "activationEvents": [],
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "chat-view",
+          "title": "Chat View",
+          "icon": "media/chat.svg",
+          "order": 1
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "chat.openChat",
+        "title": "チャットを開く",
+        "category": "Chat",
+        "icon": "$(comment-discussion)"
+      },
+      {
+        "command": "chat.selectModel",
+        "title": "チャットモデルを選択",
+        "category": "Chat",
+        "icon": "$(symbol-keyword)"
+      },
+      {
+        "command": "chat.clearHistory",
+        "title": "チャット履歴をクリア",
+        "category": "Chat",
+        "icon": "$(clear-all)"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "chat.openChat"
+        },
+        {
+          "command": "chat.selectModel"
+        },
+        {
+          "command": "chat.clearHistory"
+        }
+      ],
+      "view/title": [
+        {
+          "command": "chat.selectModel",
+          "when": "view == chat.chatView",
+          "group": "navigation"
+        },
+        {
+          "command": "chat.clearHistory",
+          "when": "view == chat.chatView",
+          "group": "navigation"
+        }
+      ]
+    },
+    "views": {
+      "chat-view": [
+        {
+          "type": "webview",
+          "id": "chat.chatView",
+          "name": "Chat",
+          "icon": "media/chat.svg"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "chat.openChat",
+        "key": "ctrl+shift+c",
+        "mac": "cmd+shift+c"
+      },
+      {
+        "command": "chat.selectModel",
+        "key": "ctrl+shift+m",
+        "mac": "cmd+shift+m"
+      }
+    ]
+  },
+  "main": "./out/extension.js",
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "lint": "eslint",
+    "watch": "tsc -watch -p ./"
+  },
+  "dependencies": {
+    "@vscode/chat-extension-utils": "^0.0.0-alpha.1",
+    "marked": "^9.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.13.0",
+    "@stylistic/eslint-plugin": "^2.9.0",
+    "@types/marked": "^5.0.1",
+    "@types/node": "^20",
+    "@types/vscode": "^1.95.0",
+    "eslint": "^9.13.0",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.16.0"
+  }
+}
